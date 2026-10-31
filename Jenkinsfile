@@ -4,6 +4,7 @@ pipeline {
 
     environment {
         PYTHON = 'C:\\Users\\J\\AppData\\Local\\Programs\\Python\\Python313\\python.exe'
+        DOCKER = 'C:\\Users\\J\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe'
     }
 
     stages {
@@ -21,7 +22,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t jenkins-cicd-app:1.0 .'
+                bat '"%DOCKER%" build -t jenkins-cicd-app:1.0 .'
             }
         }
     }
