@@ -2,17 +2,20 @@
 pipeline {
     agent any
 
-    stages {
+    environment {
+        PYTHON = 'C:\\Users\\J\\AppData\\Local\\Programs\\Python\\Python313\\python.exe'
+    }
 
+    stages {
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"%PYTHON%" -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'python -m pytest -q'
+                bat '"%PYTHON%" -m pytest -q'
             }
         }
 
