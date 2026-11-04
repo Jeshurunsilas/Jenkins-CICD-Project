@@ -1,13 +1,6 @@
-FROM python:3.12-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY app.py .
-
-EXPOSE 5000
-
-CMD ["python", "app.py"]
+FROM node:20
+WORKDIR /calculator
+COPY calculator.html .
+COPY server.js .
+EXPOSE 5000 
+CMD [ "node","server.js" ]
