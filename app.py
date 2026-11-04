@@ -237,7 +237,7 @@ footer {
 
         <h1>
             Welcome to<br>
-            <span>Something Amazing.</span>
+            <span>Jeshurun Silas.</span>
         </h1>
 
         <p class="description">
