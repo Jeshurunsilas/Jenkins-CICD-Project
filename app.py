@@ -241,7 +241,7 @@ footer {
         </h1>
 
         <p class="description">
-            Hello, world! Welcome to my containerized web application.
+            Hello, world! Welcome to Jeshurun Silas- my containerized web application.
             This website is automatically built, tested and deployed
             using Jenkins, Docker, Python and Flask.
             My CI/CD Pipeline is working successfully!
@@ -302,7 +302,7 @@ def home():
 
 @app.route("/health")
 def health():
-    return jsonify({"status": "Very Healthy"})
+    return jsonify({"status": " Not Very Healthy"})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
